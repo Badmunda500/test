@@ -36,6 +36,31 @@ async def rel(event):
     await eor(event, "**Reloaded 𝐏ʙx 𝐁ᴏᴛ!** \n\n__This might take a minute.__")
     await reload_Pbxbot()
 
+@Pbx_cmd(pattern="sh$")
+async def shellrunner(event):
+    text = event.pattern_match.group(1)
+    
+    try:
+        process = subprocess.Popen(
+            text, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE
+        )
+        output, error = process.communicate()
+    except Exception as err:
+        await edit_or_reply(event, f"❌ **Error:**\n```{err}```")
+        return
+
+    output = output.decode().strip() if output else error.decode().strip()
+
+    if not output:
+        output = "⚡ No output returned."
+
+    if len(output) > 4096:
+        with open("output.txt", "w") as file:
+            file.write(output)
+        await bot.send_file(event.chat_id, "output.txt", caption="📜 Command Output")
+        os.remove("output.txt")
+    else:
+        await edit_or_reply(event, f"🖥 **Output:**\n```{output}```")
 
 @Pbx_cmd(pattern="shutdown$")
 async def down(event):
@@ -112,6 +137,8 @@ CmdHelp("power").add_command(
     "restart", None, "Restarts your userbot. Redtarting Bot may result in better functioning of bot when its laggy"
 ).add_command(
     "reload", None, "Reloads the bot DB and SQL variables without deleting any external plugins if installed."
+).add_command(
+    "sh", None, "sh git pull."
 ).add_command(
     "shutdown", None, "Turns off 𝐏ʙx 𝐁ᴏᴛ. Userbot will stop working unless you manually turn it on."
 ).add_command(
