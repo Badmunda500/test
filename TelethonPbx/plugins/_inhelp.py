@@ -113,7 +113,7 @@ if Config.BOT_USERNAME and tbot:
             alv_btn = [
                 [
                     Button.url(f"{alive_name}", f"tg://openmessage?user_id={II_BAD_BBY_II}"),
-                    Button.url("✨𝐑ᴇᴘᴏ💫", f"https://github.com/Badhacker98/PbXbot/fork")
+                    Button.url("✨𝐑ᴇᴘᴏ💫", f"https://github.com/Pbx-Official/PbXbot/fork")
                 ],
                 [
                     Button.url("💫𝐃ᴇᴠᴇʟᴏᴘᴇʀ✨", f"https://t.me/ll_BAD_MUNDA_ll"),
@@ -215,7 +215,7 @@ if Config.BOT_USERNAME and tbot:
                 title="Repository",
                 text=f"**👻 🕊️⃝‌ᴘʙx ❤️ᥫ᭡፝֟፝֟ 👻 **",
                 buttons=[
-                    [Button.url("💫 𝐑ᴇᴘᴏ ✨", "https://github.com/Badhacker98/PbXbot/fork")],
+                    [Button.url("💫 𝐑ᴇᴘᴏ ✨", "https://github.com/Pbx-Official/PbXbot/fork")],
                     [Button.url("𝐏ʙx 𝐒ᴜᴘᴘᴏʀᴛ", "https://t.me/ll_THE_BAD_BOT_ll")],
                 ],
             )
@@ -230,7 +230,7 @@ if Config.BOT_USERNAME and tbot:
                         Button.url("• ᴄʜᴀᴛ •", "https://t.me/PBX_CHAT"),
                     ],
                     [
-                        Button.url("• ʀᴇᴘᴏ •", "https://github.com/Badhacker98/PbXbot/fork"),
+                        Button.url("• ʀᴇᴘᴏ •", "https://github.com/Pbx-Official/PbXbot/fork"),
                         Button.url("• ᴅᴏᴄ •", "https://Pbxbot.tech"),
                     ],
                     [
@@ -468,4 +468,4 @@ if Config.BOT_USERNAME and tbot:
             )
 
 
-# Pbxbot
+# Pbxb
