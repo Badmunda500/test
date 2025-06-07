@@ -1,4 +1,5 @@
-from telethon import TelegramClient, ConnectionTcpAbridged
+from telethon.network.connection import ConnectionTcpAbridged
+from telethon import TelegramClient
 from telethon.sessions import StringSession
 
 # Centralize config imports
