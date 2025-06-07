@@ -4,7 +4,7 @@ from telethon.sessions import StringSession
 
 # Centralize config imports
 from PbxConfig.config import *
-from TelethonPbx.database import get_all_sessions
+from TelethonPbx.DB.db import get_all_sessions
 
 clients = []  # All user clients
 
