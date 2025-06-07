@@ -29,7 +29,7 @@ async def load_all_user_clients():
 
 # This is the main bot client
 try:
-    PbxBot = TelegramClient(
+    Pbxbot = TelegramClient(
         session="Bad-TBot",
         api_id=APP_ID,
         api_hash=API_HASH,
