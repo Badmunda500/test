@@ -3,7 +3,7 @@ from telethon import TelegramClient
 from telethon.sessions import StringSession
 
 # Centralize config imports
-from PbxConfig.config import API_ID, API_HASH, BOT_TOKEN
+from PbxConfig.config import APP_ID, API_HASH, BOT_TOKEN
 from TelethonPbx.database import get_all_sessions
 
 clients = []  # All user clients
@@ -16,7 +16,7 @@ async def load_all_user_clients():
         try:
             client = TelegramClient(
                 StringSession(sess["session"]),
-                API_ID,
+                APP_ID,
                 API_HASH,
                 connection=ConnectionTcpAbridged,
                 auto_reconnect=True,
@@ -31,7 +31,7 @@ async def load_all_user_clients():
 try:
     PbxBot = TelegramClient(
         session="Bad-TBot",
-        api_id=API_ID,
+        api_id=APP_ID,
         api_hash=API_HASH,
         connection=ConnectionTcpAbridged,
         auto_reconnect=True,
