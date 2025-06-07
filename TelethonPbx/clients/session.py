@@ -3,7 +3,7 @@ from telethon import TelegramClient
 from telethon.sessions import StringSession
 
 # Centralize config imports
-from TelethonPbx.config import API_ID, API_HASH, BOT_TOKEN
+from PbxConfig import API_ID, API_HASH, BOT_TOKEN
 from TelethonPbx.database import get_all_sessions
 
 clients = []  # All user clients
