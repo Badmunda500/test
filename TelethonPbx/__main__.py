@@ -6,7 +6,7 @@ from pathlib import Path
 
 from TelethonPbx.DB.db import create_table
 from TelethonPbx.clients.logger import LOGGER as LOGS
-from TelethonPbx.clients.session import PbxBot, load_all_user_clients, Pbx, Pbxbot
+from TelethonPbx.clients.session import load_all_user_clients, Pbx, Pbxbot
 from TelethonPbx.utils.plug import load_module, plug_channel
 from TelethonPbx.utils.startup import (join_it, logger_check, start_msg,
                                         update_sudo)
@@ -30,14 +30,14 @@ async def plug_load(path):
 async def Pbx_is_on(total):
     await update_sudo()
     await logger_check(Pbx)
-    await start_msg(PbxBot, PBX_PIC, __Pbxver__, total)
+    await start_msg(Pbxbot, PBX_PIC, __Pbxver__, total)
     await join_it(Pbx)
 
 async def main():
     await create_table()
     await load_all_user_clients()
     LOGS.info("••• Starting PBxBot (TELETHON) •••")
-    await PbxBot.start()
+    await Pbxbot.start()
     LOGS.info("••• PBxBot Startup Completed •••")
     LOGS.info("••• Starting to load Plugins •••")
     await plug_load("TelethonPbx/plugins/*.py")
