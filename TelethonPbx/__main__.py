@@ -6,7 +6,7 @@ from pathlib import Path
 from PbxConfig import Config
 
 from TelethonPbx.clients.logger import LOGGER as LOGS
-from TelethonPbx.clients.session import H2, H3, H4, H5, Pbx, PbxBot
+from TelethonPbx.clients.session import Pbx, PbxBot
 from TelethonPbx.utils.plug import load_module, plug_channel
 from TelethonPbx.utils.startup import (join_it, logger_check, start_msg,
                                         update_sudo)
