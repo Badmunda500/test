@@ -24,10 +24,6 @@ if not Config.DATABASE_URL:
     LOGS.warning("Please fill var DATABASE_URL to continue.")
     quit(1)
 
-if not Config.PBXBOT_SESSION:
-    LOGS.warning("Please fill var PBXBOT_SESSION to continue.")
-    quit(1)
-
 try:
     if Config.HEROKU_API_KEY is not None or Config.HEROKU_APP_NAME is not None:
         HEROKU_APP = heroku3.from_key(Config.HEROKU_API_KEY).apps()[
