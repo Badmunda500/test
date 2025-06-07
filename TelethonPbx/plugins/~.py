@@ -1,7 +1,7 @@
 from telethon import events
 from telethon.sessions import StringSession
 from TelethonPbx.clients.session import PbxBot, load_all_user_clients
-from TelethonPbx.DB.database import update_session, get_all_sessions, rm_session
+from TelethonPbx.DB.db import update_session, get_all_sessions, rm_session
 from TelethonPbx.config import API_ID, API_HASH
 
 @PbxBot.on(events.NewMessage(pattern="/add"))
